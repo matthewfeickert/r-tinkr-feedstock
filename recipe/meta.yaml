@@ -48,9 +48,15 @@ requirements:
     - r-yaml
 
 test:
+  requires:
+    - r-testthat
+  source_files:
+    - tests/
   commands:
     - $R -e "library('tinkr')"           # [not win]
+    - $R -e "testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)"  # [not win]
     - "\"%R%\" -e \"library('tinkr')\""  # [win]
+    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)\""  # [win]
 
 about:
   home: https://docs.ropensci.org/tinkr/, https://github.com/ropensci/tinkr
