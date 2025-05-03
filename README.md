@@ -3,11 +3,15 @@ About r-tinkr-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tinkr-feedstock/blob/main/LICENSE.txt)
 
-Home: https://docs.ropensci.org/tinkr/, https://github.com/ropensci/tinkr
+Home: https://docs.ropensci.org/tinkr/
 
 Package license: GPL-3.0-or-later
 
 Summary: Parsing '(R)Markdown' files with numerous regular expressions can be fraught with peril, but it does not have to be this way. Converting '(R)Markdown' files to 'XML' using the 'commonmark' package allows in-memory editing via of 'markdown' elements via 'XPath' through the extensible 'R6' class called 'yarn'. These modified 'XML' representations can be written to '(R)Markdown' documents via an 'xslt' stylesheet which implements an extended version of 'GitHub'-flavoured 'markdown' so that you can tinker to your hearts content.
+
+Development: https://github.com/ropensci/tinkr
+
+Documentation: https://docs.ropensci.org/tinkr/
 
 Current build status
 ====================
