@@ -31,21 +31,23 @@ requirements:
     - r-r6
     - r-commonmark >=1.6
     - r-glue
+    - r-lifecycle
     - r-magrittr
     - r-purrr
+    - r-rlang >=0.4.5
     - r-xml2
     - r-xslt
-    - r-yaml
   run:
     - r-base
     - r-r6
     - r-commonmark >=1.6
     - r-glue
+    - r-lifecycle
     - r-magrittr
     - r-purrr
+    - r-rlang >=0.4.5
     - r-xml2
     - r-xslt
-    - r-yaml
 
 test:
   requires:
