@@ -1,4 +1,4 @@
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tinkr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tinkr/tinkr_{{ version }}.tar.gz
-  sha256: 99e6211e90fa4ceccf860f75f890b5474cd84533b5eab34487a9baf2ed4936dd
+  sha256: 425bc04af76483b8cf713ad141bdebb963cf54dd363fbdbee3a709820ec4d23e
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -31,21 +31,23 @@ requirements:
     - r-r6
     - r-commonmark >=1.6
     - r-glue
+    - r-lifecycle
     - r-magrittr
     - r-purrr
+    - r-rlang >=0.4.5
     - r-xml2
     - r-xslt
-    - r-yaml
   run:
     - r-base
     - r-r6
     - r-commonmark >=1.6
     - r-glue
+    - r-lifecycle
     - r-magrittr
     - r-purrr
+    - r-rlang >=0.4.5
     - r-xml2
     - r-xslt
-    - r-yaml
 
 test:
   requires:
