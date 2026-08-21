@@ -7,20 +7,30 @@ Home: https://docs.ropensci.org/tinkr/
 
 Package license: GPL-3.0-or-later
 
-Summary: Parsing '(R)Markdown' files with numerous regular expressions can be fraught with peril, but it does not have to be this way. Converting '(R)Markdown' files to 'XML' using the 'commonmark' package allows in-memory editing via of 'markdown' elements via 'XPath' through the extensible 'R6' class called 'yarn'. These modified 'XML' representations can be written to '(R)Markdown' documents via an 'xslt' stylesheet which implements an extended version of 'GitHub'-flavoured 'markdown' so that you can tinker to your hearts content.
+Summary: Cast '(R)Markdown' Files to 'XML' and Back Again
 
 Development: https://github.com/ropensci/tinkr
 
 Documentation: https://docs.ropensci.org/tinkr/
 
+Parsing '(R)Markdown' files with numerous regular expressions can be
+fraught with peril, but it does not have to be this way.
+Converting '(R)Markdown' files to 'XML' using the 'commonmark' package
+allows in-memory editing via of 'markdown' elements via 'XPath' through
+the extensible 'R6' class called 'yarn'.
+These modified 'XML' representations can be written to '(R)Markdown'
+documents via an 'xslt' stylesheet which implements an extended version of
+'GitHub'-flavoured 'markdown' so that you can tinker to your hearts content.
+
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-tinkr-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/r-tinkr-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/r-tinkr-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -43,31 +53,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `r-tinkr` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install r-tinkr
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install r-tinkr
 ```
 
-It is possible to list all of the versions of `r-tinkr` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add r-tinkr
+# for installing globally
+pixi global install r-tinkr
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `r-tinkr` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search r-tinkr --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search r-tinkr --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search r-tinkr --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -79,6 +131,8 @@ mamba repoquery whoneeds r-tinkr --channel conda-forge
 # List dependencies of `r-tinkr`:
 mamba repoquery depends r-tinkr --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
